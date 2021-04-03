@@ -1,0 +1,25 @@
+$color-primary: #2998ff;
+$color-primary-light: #2998ff;
+$color-primary-dark: #5643fa;
+
+.section_features {
+    padding: 20rem 4rem;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+        url('./download-2.png');
+    background-size: cover;
+
+    transform: skewY(-7deg);
+
+    margin-top: -10rem;
+
+    // Using the direct child selector to straighten evry child in skewed section
+    &>* {
+        transform: skewY(7deg);
+    }
+
+    @media (max-width: 56.25em) {
+        padding: 10rem 0;
+    }
+}

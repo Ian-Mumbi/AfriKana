@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    background-color: lighten($color: #7a8288, $amount: 50%);
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center; // cross axis
+    font-weight: 600;
+    color: #7a8288;
+
+    .items {
+        text-transform: uppercase;
+        list-style: none;
+        transform: all .3s;
+
+        &:not(:last-child) {
+            margin-right: 10rem;
+        }
+
+        &:first-child {
+            font-size: 2rem;
+        }
+
+        &:not(:first-child) {
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            border-bottom: 4px solid #7a8288;
+        }
+    }
+}

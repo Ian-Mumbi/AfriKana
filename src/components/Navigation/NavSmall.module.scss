@@ -1,0 +1,57 @@
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+$color-grey-light-1: #f7f7f7;
+
+.container {
+    height: 10vh;
+    background-image: linear-gradient(to right, $color-tertiary-light, $color-tertiary-dark);
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    align-items: center;
+    font-size: 1.5rem;
+
+    @media (max-width: 37.5em) {
+        flex-direction: column;
+        height: 30vh;
+        padding-bottom: 2rem;
+        justify-content: center;
+        font-size: 1.6rem;
+    }
+
+    .brand {
+
+        &,
+        &:link,
+        &:active {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-grey-light-1;
+        }
+
+        font-size: 3rem;
+
+        @media (max-width: 37.5em) {
+            font-size: 6rem;
+        }
+    }
+
+    .linkContainer {
+        display: flex;
+
+        :not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        .link {
+
+            &,
+            &:link,
+            &:visited {
+                text-decoration: none;
+                list-style: none;
+                color: $color-grey-light-1;
+            }
+        }
+    }
+}

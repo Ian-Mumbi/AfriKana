@@ -1,0 +1,20 @@
+$color-primary-light: #2998ff;
+$color-primary-dark: #5643fa;
+
+.header {
+    position: relative;
+    height: 85vh;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)), url('./header.png');
+    background-size: cover;
+    background-position: top;
+
+    .text__box {
+        top: 40%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

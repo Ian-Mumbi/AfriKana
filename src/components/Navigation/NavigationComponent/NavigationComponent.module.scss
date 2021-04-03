@@ -1,0 +1,90 @@
+$color-primary-light: #2998ff;
+$color-primary-dark: #5643fa;
+$color-grey-light-1: #f7f7f7;
+$color-white: #fff;
+
+.navigation {
+    .button {
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 20000;
+        box-shadow: 0 1rem 3rem rgba($color: #000, $alpha: .2);
+    }
+
+    .background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        z-index: 1000;
+
+        // transform: scale(80);
+    }
+
+    .nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1230;
+
+        // opacity: 0;
+        // width: 0;
+    }
+
+    .list {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+    }
+
+    .item {
+        margin: 1.3rem;
+    }
+
+    .link {
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            padding: 1rem 2rem;
+            font-weight: 300;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+            background-size: 220%;
+            transition: all .4s;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary-light;
+            transform: translateX(1rem);
+        }
+    }
+
+    .onClick {
+        @extend .background;
+        transform: scale(80);
+    }
+
+    .showNavList {
+        @extend .nav;
+        opacity: 1;
+        width: 100%;
+    }
+}

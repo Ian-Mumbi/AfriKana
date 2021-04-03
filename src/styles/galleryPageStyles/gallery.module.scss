@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+
+    @media (max-width: 56.25em) {
+        flex-direction: column;
+    }
+}
+
+img {
+    width: 25%;
+    flex: 1;
+}
